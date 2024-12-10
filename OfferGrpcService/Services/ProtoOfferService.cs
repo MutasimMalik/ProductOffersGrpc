@@ -7,6 +7,11 @@ namespace OfferGrpcService.Services
 {
     public class ProtoOfferService : OfferGrpcService.Protos.OfferGrpcService.OfferGrpcServiceBase
     {
+        /// <summary>
+        /// This service is related to and implements the methods of .proto file
+        /// The model we created in .proto files, should be the models we are returning
+        /// That is the reason I converted the models to the models of .proto and returned them
+        /// </summary>
         private readonly IOfferService _offerService;
 
         public ProtoOfferService(IOfferService offerService)
