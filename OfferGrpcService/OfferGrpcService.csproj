@@ -7,13 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\offer.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.64.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Protos\" />
-    <Folder Include="Services\" />
+    <Protobuf Include="Protos\offer.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using OfferGrpcService.Data;
 using OfferGrpcService.DomainServices;
 using OfferGrpcService.Models;
 using OfferGrpcService.Repositories;
-//using OfferGrpcService.Services;
+using OfferGrpcService.Services;
 
 namespace OfferGrpcService
 {
@@ -34,6 +34,7 @@ namespace OfferGrpcService
 
             // Configure the HTTP request pipeline.
 
+            app.MapGrpcService<ProtoOfferService>();
             app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 
             app.Run();
