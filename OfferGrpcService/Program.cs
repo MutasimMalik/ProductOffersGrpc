@@ -30,6 +30,7 @@ namespace OfferGrpcService
                     new Offer { Id = 2, ProductName = "Bata Shoe", OfferDescription = "20% off" },
                     new Offer { Id = 3, ProductName = "Apex Shoe", OfferDescription = "30% off" }
                 );
+                context.SaveChanges();
             }
 
             // Configure the HTTP request pipeline.
